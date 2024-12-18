@@ -10,15 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @RequestMapping("/test")
-public class JavaAppApplication {
-
-	public static void main(String[] args) {
+public class JavaAppApplication 
+{
+	public static void main(String[] args) 
+	{
 		SpringApplication.run(JavaAppApplication.class, args);
 	}
 
-	@GetMapping
-	public String echo() {
-		return "<h1>Das hier ist ein kleiner Test ahllooo<h1/>";
+	@GetMapping("/counter")
+	public String echo() 
+	{
+		return "redirect:/counter.html";
 	}
 	
 }

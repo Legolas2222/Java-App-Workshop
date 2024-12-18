@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 20px; cursor: pointer; }
+        #counter { font-size: 30px; margin: 20px 0; }
+    </style>
+    <script>
+        let count = 0;
+
+        function getStartValue() 
+        {
+            const urlParams = new URLSearchParams(window.location.search);
+            const start = urlParams.get('start');
+            if (start)
+            {
+                count = parseInt(start); 
+            }
+        }
+
+        function increment()
+        {
+            count++;
+            document.getElementById('counter').innerText = count;
+        }
+
+        window.onload = function() 
+        {
+            getStartValue();
+            document.getElementById('counter').innerText = count;
+        };
+    </script>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p id="counter">0</p>
+    <button onclick="increment()">+</button>
+</body>
+</html>
