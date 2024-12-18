@@ -17,6 +17,7 @@ public class TeacherController {
     public String testLehrer(@RequestParam int index) {
         if (index == 0) {
             return lehrer[0];
+            // Test KOmmentar
         }
         if (index - 1 == lehrer.length) {
             return lehrer[index - 1];

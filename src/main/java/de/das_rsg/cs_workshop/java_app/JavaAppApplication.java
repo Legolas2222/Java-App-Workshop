@@ -18,7 +18,7 @@ public class JavaAppApplication {
 
 	@GetMapping
 	public String echo() {
-		return "<h1>Das hier ist ein kleiner Test<h1/>";
+		return "<h1>Das hier ist ein kleiner Test ahllooo<h1/>";
 	}
 	
 }
