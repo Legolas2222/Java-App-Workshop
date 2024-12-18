@@ -12,7 +12,7 @@ public class TeacherController {
     public TeacherController() {
         this.lehrer = new String[] {"SBK", "TES", "ZAP"};
     }
-
+//Kommentar um zu veroeffentlichen
     @GetMapping
     public String testLehrer(@RequestParam int index) {
         if (index == 0) {
