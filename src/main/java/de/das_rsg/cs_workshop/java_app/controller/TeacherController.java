@@ -15,14 +15,8 @@ public class TeacherController {
 
     @GetMapping
     public String testLehrer(@RequestParam int index) {
-        if (index == 0) {
-            return lehrer[0];
-        }
-        if (index - 1 == lehrer.length) {
-            return lehrer[index - 1];
-        } else {
-            return "Lehrer nicht gefunden";
-            
-        }
+      if(index<=length()){
+        return lehrer[index];
+      }else{return "lehrer nicht gefunden"}
     } 
 }
