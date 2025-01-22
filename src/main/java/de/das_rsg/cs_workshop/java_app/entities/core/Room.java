@@ -1,9 +1,6 @@
-package de.das_rsg.cs_workshop.java_app.entities;
-
-import de.das_rsg.cs_workshop.java_app.entities.core.Entity;
+package de.das_rsg.cs_workshop.java_app.entities.core;
 
 public class Room extends Entity{
-
     private int roomnumber;
     private int kapazitaet;
 
@@ -21,12 +18,12 @@ public class Room extends Entity{
         return roomnumber;
     }
 
-    public void setRoomnumber(int rn){
-        roomnumberm = rn;
-    }
-
     public int getKapazitaet(){
         return kapazitaet;
+    }
+
+    public void setRoomnumber(int rn){
+        roomnumber = rn;
     }
 
     public void setKapazitaet(int k){
