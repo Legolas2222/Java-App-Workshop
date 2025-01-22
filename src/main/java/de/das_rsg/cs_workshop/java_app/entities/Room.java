@@ -10,8 +10,16 @@ public class Room extends Entity{
         super();
     }
 
+    public Room(int rn){
+        super();
+    }
+
     public int getRoomnumber(){
         return roomnumber;
     }
+
+    public void setRoomnumber(int rn){
+        roomnumberm = rn;
+    }    
 
 }
