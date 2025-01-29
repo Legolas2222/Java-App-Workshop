@@ -37,4 +37,9 @@ public class Teacher extends Entity {
     public void setAcronym(String acronym) {
         this.acronym = acronym;
     }
-}
+    @Override
+    public String toString(){
+      return "id"+ "firstName"+"lastName"+"acronym"; 
+    }
+    }
+
