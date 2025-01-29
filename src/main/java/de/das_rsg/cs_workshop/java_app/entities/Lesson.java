@@ -13,15 +13,18 @@ public class Lesson extends Entity{
     private LessonState state;
 
 
-    public Lesson(LocalDateTime start) {
+    public Lesson(LocalDateTime start, LessonState state) {
         this.start = start;
         this.end = start.plusMinutes(durationMinutes);
+        this.room = Room.RoomTest();
+        this.state = state;
     }
 
     public Lesson(LocalDateTime start, LocalDateTime end) {
         this.start = start;
         this.end = end;
         this.durationMinutes = (int) (end.toEpochSecond(null) - start.toEpochSecond(null)) / 60;
+        this.room = Room.RoomTest();
     }
 
     public int getDurationMinutes() {
@@ -30,6 +33,6 @@ public class Lesson extends Entity{
 
     @Override
     public String toString() {
-        return start.toString() + " - " + end.toString() + " in " + room.toString() + "with State" + state.toString();
+        return "Start: " + start.toString() + " bis " + end.toString() + "\n in Raum: " + room.toString() + "\n mit Status" + state.toString() + "\n\t\t\t";
     }
 }

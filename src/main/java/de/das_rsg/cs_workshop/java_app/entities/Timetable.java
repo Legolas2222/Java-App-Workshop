@@ -24,7 +24,7 @@ public class Timetable extends Entity {
     public void createTest() {
         Lesson[] newLessons = new Lesson[4];
         for (int i = 0; i < 4; i++) {
-            newLessons[i] = new Lesson(LocalDateTime.of(2025, 1, 29, 7+i, 55, 0));
+            newLessons[i] = new Lesson(LocalDateTime.of(2025, 1, 29, 7+i, 55, 0), LessonState.FINDET_STATT);
         }
         setLessons(newLessons);
     }
@@ -32,7 +32,7 @@ public class Timetable extends Entity {
     public String toString() {
         String output = "";
         for (Lesson lesson : lessons) {
-            output += lesson.toString() + "\n";
+            output += lesson.toString() + "\n\n";
         }
         return output;
     }
