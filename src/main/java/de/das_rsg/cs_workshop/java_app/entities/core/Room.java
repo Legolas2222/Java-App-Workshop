@@ -15,7 +15,7 @@ public class Room extends Entity{
     }
 
     public static Room roomTest(){
-        return new Room(401,30);
+        return new Room(104,30);
     }
 
     public int getRoomnumber(){
