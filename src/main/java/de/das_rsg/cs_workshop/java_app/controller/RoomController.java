@@ -4,24 +4,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-@RequestMapping("/lehrer")
+@RequestMapping("/room")
 @RestController
-public class TeacherController {
-
-    private String[] lehrer;
-    public TeacherController() {
-        this.lehrer = new String[] {"SBK", "TES", "ZAP"};
+public class RoomController {
+    
+    private String[] room;
+    public RoomController(){
+    
     }
 
     @GetMapping
-    public String testLehrer(@RequestParam int index) {
+    public String testRoom(@RequestParam int index) {
         if (index == 0) {
-            return lehrer[0];
+            return room[0];
         }
-        if (index - 1 == lehrer.length) {
-            return lehrer[index - 1];
+        if (index - 1 == room.length) {
+            return room[index - 1];
         } else {
-            return "Lehrer nicht gefunden";
+            return "Raum nicht gefunden";
             
         }
     } 

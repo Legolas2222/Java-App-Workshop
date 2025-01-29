@@ -14,6 +14,10 @@ public class Room extends Entity{
         kapazitaet = k;
     }
 
+    public static Room roomTest(){
+        return new Room(401,30);
+    }
+
     public int getRoomnumber(){
         return roomnumber;
     }
