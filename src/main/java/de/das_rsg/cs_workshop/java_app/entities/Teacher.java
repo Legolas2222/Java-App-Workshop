@@ -8,6 +8,7 @@ import de.das_rsg.cs_workshop.java_app.entities.core.Entity;
 public class Teacher extends Entity {
     private String firstName;
     private String lastName;
+    // Repraesenteiert das Kuerzel
     private String acronym;
 
     public Teacher() {
@@ -36,5 +37,10 @@ public class Teacher extends Entity {
 
     public void setAcronym(String acronym) {
         this.acronym = acronym;
+    }
+
+    @Override
+    public String toString() {
+        return "Lehrer: " + firstName + " " + lastName + " (" + acronym + ")";
     }
 }
