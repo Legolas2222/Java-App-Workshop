@@ -36,4 +36,6 @@ public class Timetable extends Entity {
         }
         return output;
     }
+
+
 }
